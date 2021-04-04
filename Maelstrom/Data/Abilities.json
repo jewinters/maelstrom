@@ -1,491 +1,610 @@
 [
     {
         "AbilityID": 1,
-        "AbilityName": "HP-J"
+        "AbilityName": "HP-J",
+        "APCost": 50
     },
     {
         "AbilityID": 2,
-        "AbilityName": "STR-J"
+        "AbilityName": "STR-J",
+        "APCost": 50
     },
     {
         "AbilityID": 3,
-        "AbilityName": "VIT-J"
+        "AbilityName": "VIT-J",
+        "APCost": 50
     },
     {
         "AbilityID": 4,
-        "AbilityName": "MAG-J"
+        "AbilityName": "MAG-J",
+        "APCost": 50
     },
     {
         "AbilityID": 5,
-        "AbilityName": "SPR-J"
+        "AbilityName": "SPR-J",
+        "APCost": 50
     },
     {
         "AbilityID": 6,
-        "AbilityName": "SPD-J"
+        "AbilityName": "SPD-J",
+        "APCost": 120
     },
     {
         "AbilityID": 7,
-        "AbilityName": "EVA-J"
+        "AbilityName": "EVA-J",
+        "APCost": 200
     },
     {
         "AbilityID": 8,
-        "AbilityName": "HIT-J"
+        "AbilityName": "HIT-J",
+        "APCost": 120
     },
     {
         "AbilityID": 9,
-        "AbilityName": "LUCK-J"
+        "AbilityName": "LUCK-J",
+        "APCost": 200
     },
     {
         "AbilityID": 10,
-        "AbilityName": "Elem-Atk-J"
+        "AbilityName": "Elem-Atk-J",
+        "APCost": 160
     },
     {
         "AbilityID": 11,
-        "AbilityName": "ST-Atk-J"
+        "AbilityName": "ST-Atk-J",
+        "APCost": 160
     },
     {
         "AbilityID": 12,
-        "AbilityName": "Elem-Def-J"
+        "AbilityName": "Elem-Def-J",
+        "APCost": 100
     },
     {
         "AbilityID": 13,
-        "AbilityName": "ST-Def-J"
+        "AbilityName": "ST-Def-J",
+        "APCost": 100
     },
     {
         "AbilityID": 14,
-        "AbilityName": "Elem-Defx2"
+        "AbilityName": "Elem-Defx2",
+        "APCost": 130
     },
     {
         "AbilityID": 15,
-        "AbilityName": "Elem-Defx4"
+        "AbilityName": "Elem-Defx4",
+        "APCost": 180
     },
     {
         "AbilityID": 16,
-        "AbilityName": "ST-Def-Jx2"
+        "AbilityName": "ST-Def-Jx2",
+        "APCost": 130
     },
     {
         "AbilityID": 17,
-        "AbilityName": "ST-Def-Jx4"
+        "AbilityName": "ST-Def-Jx4",
+        "APCost": 180
     },
     {
         "AbilityID": 18,
-        "AbilityName": "Abilityx3"
+        "AbilityName": "Abilityx3",
+        "APCost": 150
     },
     {
         "AbilityID": 19,
-        "AbilityName": "Abilityx4"
+        "AbilityName": "Abilityx4",
+        "APCost": 200
     },
     {
         "AbilityID": 20,
-        "AbilityName": "Magic"
+        "AbilityName": "Magic",
+        "APCost": 1,
+        "BasicAbility": true
     },
     {
         "AbilityID": 21,
-        "AbilityName": "GF"
+        "AbilityName": "GF",
+        "APCost": 1,
+        "BasicAbility": true
     },
     {
         "AbilityID": 22,
-        "AbilityName": "Draw"
+        "AbilityName": "Draw",
+        "APCost": 1,
+        "BasicAbility": true
     },
     {
         "AbilityID": 23,
-        "AbilityName": "Item"
+        "AbilityName": "Item",
+        "APCost": 1,
+        "BasicAbility": true
     },
     {
         "AbilityID": 24,
-        "AbilityName": "Empty"
+        "AbilityName": "Empty",
+        "APCost": 250
     },
     {
         "AbilityID": 25,
-        "AbilityName": "Card"
+        "AbilityName": "Card",
+        "APCost": 40
     },
     {
         "AbilityID": 26,
-        "AbilityName": "Doom"
+        "AbilityName": "Doom",
+        "APCost": 60
     },
     {
         "AbilityID": 27,
-        "AbilityName": "MadRush"
+        "AbilityName": "MadRush",
+        "APCost": 60
     },
     {
         "AbilityID": 28,
-        "AbilityName": "Treatment"
+        "AbilityName": "Treatment",
+        "APCost": 100
     },
     {
         "AbilityID": 29,
-        "AbilityName": "Defend"
+        "AbilityName": "Defend",
+        "APCost": 100
     },
     {
         "AbilityID": 30,
-        "AbilityName": "Darkside"
+        "AbilityName": "Darkside",
+        "APCost": 100
     },
     {
         "AbilityID": 31,
-        "AbilityName": "Recover"
+        "AbilityName": "Recover",
+        "APCost": 200
     },
     {
         "AbilityID": 32,
-        "AbilityName": "Absorb"
+        "AbilityName": "Absorb",
+        "APCost": 80
     },
     {
         "AbilityID": 33,
-        "AbilityName": "Revive"
+        "AbilityName": "Revive",
+        "APCost": 200
     },
     {
         "AbilityID": 34,
-        "AbilityName": "LVDown"
+        "AbilityName": "LVDown",
+        "APCost": 100
     },
     {
         "AbilityID": 35,
-        "AbilityName": "LVUp"
+        "AbilityName": "LVUp",
+        "APCost": 100
     },
     {
         "AbilityID": 36,
-        "AbilityName": "Kamikaze"
+        "AbilityName": "Kamikaze",
+        "APCost": 100
     },
     {
         "AbilityID": 37,
-        "AbilityName": "Devour"
+        "AbilityName": "Devour",
+        "APCost": 100
     },
     {
         "AbilityID": 38,
         "AbilityName": "MiniMog",
-        "ItemExclusive": true
+        "ItemExclusive": true,
+        "APCost": 100
     },
     {
         "AbilityID": 39,
-        "AbilityName": "HP+20%"
+        "AbilityName": "HP+20%",
+        "APCost": 60
     },
     {
         "AbilityID": 40,
-        "AbilityName": "HP+40%"
+        "AbilityName": "HP+40%",
+        "APCost": 120
     },
     {
         "AbilityID": 41,
-        "AbilityName": "HP+80%"
+        "AbilityName": "HP+80%",
+        "APCost": 240
     },
     {
         "AbilityID": 42,
-        "AbilityName": "Str+20%"
+        "AbilityName": "Str+20%",
+        "APCost": 60
     },
     {
         "AbilityID": 43,
-        "AbilityName": "Str+40%"
+        "AbilityName": "Str+40%",
+        "APCost": 120
     },
     {
         "AbilityID": 44,
-        "AbilityName": "Str+60%"
+        "AbilityName": "Str+60%",
+        "APCost": 240
     },
     {
         "AbilityID": 45,
-        "AbilityName": "Vit+20%"
+        "AbilityName": "Vit+20%",
+        "APCost": 60
     },
     {
         "AbilityID": 46,
-        "AbilityName": "Vit+40%"
+        "AbilityName": "Vit+40%",
+        "APCost": 120
     },
     {
         "AbilityID": 47,
         "AbilityName": "Vit+60%",
-        "ItemExclusive": true
+        "ItemExclusive": true,
+        "APCost": 240
     },
     {
         "AbilityID": 48,
-        "AbilityName": "Mag+20%"
+        "AbilityName": "Mag+20%",
+        "APCost": 60
     },
     {
         "AbilityID": 49,
-        "AbilityName": "Mag+40%"
+        "AbilityName": "Mag+40%",
+        "APCost": 120
     },
     {
         "AbilityID": 50,
-        "AbilityName": "Mag+60%"
+        "AbilityName": "Mag+60%",
+        "APCost": 240
     },
     {
         "AbilityID": 51,
-        "AbilityName": "Spr+20%"
+        "AbilityName": "Spr+20%",
+        "APCost": 60
     },
     {
         "AbilityID": 52,
-        "AbilityName": "Spr+40%"
+        "AbilityName": "Spr+40%",
+        "APCost": 120
     },
     {
         "AbilityID": 53,
         "AbilityName": "Spr+60%",
-        "ItemExclusive": true
+        "ItemExclusive": true,
+        "APCost": 240
     },
     {
         "AbilityID": 54,
-        "AbilityName": "Spd+20%"
+        "AbilityName": "Spd+20%",
+        "APCost": 150
     },
     {
         "AbilityID": 55,
-        "AbilityName": "Spd+40%"
+        "AbilityName": "Spd+40%",
+        "APCost": 200
     },
     {
         "AbilityID": 56,
-        "AbilityName": "Eva+30%"
+        "AbilityName": "Eva+30%",
+        "APCost": 150
     },
     {
         "AbilityID": 57,
-        "AbilityName": "Luck+50%"
+        "AbilityName": "Luck+50%",
+        "APCost": 200
     },
     {
         "AbilityID": 58,
-        "AbilityName": "Mug"
+        "AbilityName": "Mug",
+        "APCost": 200
     },
     {
         "AbilityID": 59,
-        "AbilityName": "MedData"
+        "AbilityName": "MedData",
+        "APCost": 200
     },
     {
         "AbilityID": 60,
-        "AbilityName": "Counter"
+        "AbilityName": "Counter",
+        "APCost": 200
     },
     {
         "AbilityID": 61,
         "AbilityName": "Return Damage",
-        "ItemExclusive": true
+        "ItemExclusive": true,
+        "APCost": 250
     },
     {
         "AbilityID": 62,
-        "AbilityName": "Cover"
+        "AbilityName": "Cover",
+        "APCost": 100
     },
     {
         "AbilityID": 63,
-        "AbilityName": "Initiative"
+        "AbilityName": "Initiative",
+        "APCost": 160
     },
     {
         "AbilityID": 64,
-        "AbilityName": "Move-HPUp"
+        "AbilityName": "Move-HPUp",
+        "APCost": 200
     },
     {
         "AbilityID": 65,
-        "AbilityName": "HPBonus"
+        "AbilityName": "HPBonus",
+        "APCost": 100
     },
     {
         "AbilityID": 66,
-        "AbilityName": "StrBonus"
+        "AbilityName": "StrBonus",
+        "APCost": 100
     },
     {
         "AbilityID": 67,
-        "AbilityName": "VitBonus"
+        "AbilityName": "VitBonus",
+        "APCost": 100
     },
     {
         "AbilityID": 68,
-        "AbilityName": "MagBonus"
+        "AbilityName": "MagBonus",
+        "APCost": 100
     },
     {
         "AbilityID": 69,
-        "AbilityName": "SprBonus"
+        "AbilityName": "SprBonus",
+        "APCost": 100
     },
     {
         "AbilityID": 70,
-        "AbilityName": "Auto-Protect"
+        "AbilityName": "Auto-Protect",
+        "APCost": 250
     },
     {
         "AbilityID": 71,
-        "AbilityName": "Auto-Shell"
+        "AbilityName": "Auto-Shell",
+        "APCost": 250
     },
     {
         "AbilityID": 72,
-        "AbilityName": "Auto-Reflect"
+        "AbilityName": "Auto-Reflect",
+        "APCost": 250
     },
     {
         "AbilityID": 73,
-        "AbilityName": "Auto-Haste"
+        "AbilityName": "Auto-Haste",
+        "APCost": 250
     },
     {
         "AbilityID": 74,
-        "AbilityName": "Auto Potion"
+        "AbilityName": "Auto Potion",
+        "APCost": 150
     },
     {
         "AbilityID": 75,
-        "AbilityName": "Expendx2-1"
+        "AbilityName": "Expendx2-1",
+        "APCost": 250
     },
     {
         "AbilityID": 76,
-        "AbilityName": "Expendx3-1"
+        "AbilityName": "Expendx3-1",
+        "APCost": 250
     },
     {
         "AbilityID": 77,
         "AbilityName": "Ribbon",
-        "ItemExclusive": true
+        "ItemExclusive": true,
+        "APCost": 1
     },
     {
         "AbilityID": 78,
-        "AbilityName": "Alert"
+        "AbilityName": "Alert",
+        "APCost": 200
     },
     {
         "AbilityID": 79,
-        "AbilityName": "Move-Find"
+        "AbilityName": "Move-Find",
+        "APCost": 40
     },
     {
         "AbilityID": 80,
-        "AbilityName": "Enc-Half"
+        "AbilityName": "Enc-Half",
+        "APCost": 30
     },
     {
         "AbilityID": 81,
-        "AbilityName": "Enc-None"
+        "AbilityName": "Enc-None",
+        "APCost": 100
     },
     {
         "AbilityID": 82,
-        "AbilityName": "RareItem"
+        "AbilityName": "RareItem",
+        "APCost": 250
     },
     {
         "AbilityID": 83,
-        "AbilityName": "SumMag+10%"
+        "AbilityName": "SumMag+10%",
+        "APCost": 40
     },
     {
         "AbilityID": 84,
-        "AbilityName": "SumMag+20%"
+        "AbilityName": "SumMag+20%",
+        "APCost": 70
     },
     {
         "AbilityID": 85,
-        "AbilityName": "SumMag+30%"
+        "AbilityName": "SumMag+30%",
+        "APCost": 140
     },
     {
         "AbilityID": 86,
-        "AbilityName": "SumMag+40%"
+        "AbilityName": "SumMag+40%",
+        "APCost": 200
     },
     {
         "AbilityID": 87,
-        "AbilityName": "GFHP+10%"
+        "AbilityName": "GFHP+10%",
+        "APCost": 40
     },
     {
         "AbilityID": 88,
-        "AbilityName": "GFHP+20%"
+        "AbilityName": "GFHP+20%",
+        "APCost": 70
     },
     {
         "AbilityID": 89,
-        "AbilityName": "GFHP+30%"
+        "AbilityName": "GFHP+30%",
+        "APCost": 140
     },
     {
         "AbilityID": 90,
-        "AbilityName": "GFHP+40%"
+        "AbilityName": "GFHP+40%",
+        "APCost": 200
     },
     {
         "AbilityID": 91,
-        "AbilityName": "Boost"
+        "AbilityName": "Boost",
+        "APCost": 10
     },
     {
         "AbilityID": 92,
         "AbilityName": "Haggle",
-        "MenuAbility":  true
+        "MenuAbility":  true,
+        "APCost": 150
     },
     {
         "AbilityID": 93,
         "AbilityName": "Sell-High",
-        "MenuAbility": true
+        "MenuAbility": true,
+        "APCost": 150
     },
     {
         "AbilityID": 94,
         "AbilityName": "Familiar",
-        "MenuAbility": true
+        "MenuAbility": true,
+        "APCost": 150
     },
     {
         "AbilityID": 95,
         "AbilityName": "CallShop",
-        "MenuAbility": true
+        "MenuAbility": true,
+        "APCost": 200
     },
     {
         "AbilityID": 96,
         "AbilityName": "JunkShop",
-        "MenuAbility": true
+        "MenuAbility": true,
+        "APCost": 150
     },
     {
         "AbilityID": 97,
         "AbilityName": "T Mag-RF",
-        "MenuAbility": true
+        "MenuAbility": true,
+        "APCost": 30
     },
     {
         "AbilityID": 98,
         "AbilityName": "IMag-RF",
-        "MenuAbility": true
+        "MenuAbility": true,
+        "APCost": 30
     },
     {
         "AbilityID": 99,
         "AbilityName": "FMag-RF",
-        "MenuAbility": true
+        "MenuAbility": true,
+        "APCost": 30
     },
     {
         "AbilityID": 100,
         "AbilityName": "LMag-RF",
-        "MenuAbility": true
+        "MenuAbility": true,
+        "APCost": 30
     },
     {
         "AbilityID": 101,
         "AbilityName": "TimeMag-RF",
-        "MenuAbility": true
+        "MenuAbility": true,
+        "APCost": 30
     },
     {
         "AbilityID": 102,
         "AbilityName": "STMag-RF",
-        "MenuAbility": true
+        "MenuAbility": true,
+        "APCost": 30
     },
     {
         "AbilityID": 103,
         "AbilityName": "SuptMag-RF",
-        "MenuAbility": true
+        "MenuAbility": true,
+        "APCost": 30
     },
     {
         "AbilityID": 104,
         "AbilityName": "ForbidMag-RF",
-        "MenuAbility": true
+        "MenuAbility": true,
+        "APCost": 30
     },
     {
         "AbilityID": 105,
         "AbilityName": "RecovMed-RF",
-        "MenuAbility": true
+        "MenuAbility": true,
+        "APCost": 30
     },
     {
         "AbilityID": 106,
         "AbilityName": "STMed-RF",
-        "MenuAbility": true
+        "MenuAbility": true,
+        "APCost": 30
     },
     {
         "AbilityID": 107,
         "AbilityName": "Ammo-RF",
-        "MenuAbility": true
+        "MenuAbility": true,
+        "APCost": 30
     },
     {
         "AbilityID": 108,
         "AbilityName": "Tool-RF",
-        "MenuAbility": true
+        "MenuAbility": true,
+        "APCost": 30
     },
     {
         "AbilityID": 109,
         "AbilityName": "ForbidMed-RF",
-        "MenuAbility": true
+        "MenuAbility": true,
+        "APCost": 200
     },
     {
         "AbilityID": 110,
         "AbilityName": "GFRecovMed-RF",
-        "MenuAbility": true
+        "MenuAbility": true,
+        "APCost": 30
     },
     {
         "AbilityID": 111,
         "AbilityName": "GFAblMed-RF",
-        "MenuAbility": true
+        "MenuAbility": true,
+        "APCost": 30
     },
     {
         "AbilityID": 112,
         "AbilityName": "Mid Mag-RF",
-        "MenuAbility": true
+        "MenuAbility": true,
+        "APCost": 60
     },
     {
         "AbilityID": 113,
         "AbilityName": "HighMag-RF",
-        "MenuAbility": true
+        "MenuAbility": true,
+        "APCost": 60
     },
     {
         "AbilityID": 114,
         "AbilityName": "MedLVUp",
-        "MenuAbility": true
+        "MenuAbility": true,
+        "APCost": 120
     },
     {
         "AbilityID": 115,
         "AbilityName": "Card Mod",
-        "MenuAbility": true
+        "MenuAbility": true,
+        "APCost": 80
     }
 ]

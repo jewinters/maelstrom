@@ -67,5 +67,10 @@ namespace Sleepey.FF8Mod.Main
 
             return result;
         }
+
+        public InitGF Clone()
+        {
+            return new InitGF(Encode());
+        }
     }
 }

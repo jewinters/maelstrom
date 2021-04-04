@@ -7,5 +7,7 @@
         public string AbilityName { get; set; }
         public bool ItemExclusive { get; set; } = false;
         public bool MenuAbility { get; set; } = false;
+        public int APCost { get; set; }
+        public bool BasicAbility { get; set; } = false;
     }
 }

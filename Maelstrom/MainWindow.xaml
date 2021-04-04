@@ -229,6 +229,7 @@
                                 <local:OptionWithDescription Title="Guarantee Basics" Description="Every GF comes with these abilities already unlocked: Magic, GF, Item, Draw." Checked="{Binding GfAbilitiesBasics, Mode=TwoWay}" />
                                 <local:OptionWithDescription Title="No Menu Duplicates" Description="Menu abilities will appear on only one GF. This does not guarantee that all menu abilities will be available." Checked="{Binding GFAbilitiesNoMenuDuplicates, Mode=TwoWay}" />
                                 <local:OptionWithDescription Title="Allow Item-Exclusives" Description="GFs may learn abilities that would normally require the use of an item: MiniMog, Vit+60%, Spr+60%, Return Damage, Ribbon." Checked="{Binding GfAbilitiesIncludeItemOnly, Mode=TwoWay}" />
+                                <local:OptionWithDescription Title="Randomize AP Cost" Description="Abilities will cost a random amount between 10 and 250 AP to learn." Checked="{Binding GfAbilitiesRandomAP, Mode=TwoWay}" />
                                 <Separator />
                                 <local:OptionWithDescription Title="Swap Sets" Description="Instead of randomizing each individual ability, GFs have their entire ability sets swapped around. This overrides the other options above." Checked="{Binding GfAbilitiesSwapSets, Mode=TwoWay}" />
                             </StackPanel>

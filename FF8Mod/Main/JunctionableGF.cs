@@ -81,5 +81,10 @@ namespace Sleepey.FF8Mod.Main
             result.Add(LevelMod);
             return result;
         }
+
+        public JunctionableGF Clone()
+        {
+            return new JunctionableGF(Encode());
+        }
     }
 }
