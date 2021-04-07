@@ -81,5 +81,10 @@ namespace Sleepey.FF8Mod.Main
             result.AddRange(PostWeaponTextData);
             return result;
         }
+
+        public IList<JunctionableGF> CloneJunctionableGFs()
+        {
+            return JunctionableGFs.Select(junctionableGF => junctionableGF.Clone()).ToList();
+        }
     }
 }

@@ -22,19 +22,30 @@ namespace Sleepey.Maelstrom
                 .Where(i => !i.SummonItem || settings.ShopSummonItems)
                 .Where(i => !i.Magazine || settings.ShopMagazines)
                 .Where(i => !i.ChocoboWorld || settings.ShopChocoboWorld)
+                .Where(i => !i.StatUp || settings.ShopStatUps)
                 .Select(i => i.ID).ToList();
 
+            var unusedItems = new List<int>(pool);
             foreach (var s in result)
             {
-                s.Items = GenerateShop(random, pool);
+                //Don't bother randomizing inaccessible shops
+                if (!s.Name.Contains("Laguna") || s.Name.Equals("Winhill Shop (Laguna)"))
+                {
+                    s.Items = GenerateShop(random, unusedItems);
+
+                    //Reset unused items if we run out
+                    if (!settings.ShopUnique || unusedItems.Count < 16)
+                    {
+                        unusedItems = new List<int>(pool);
+                    }
+                }
             }
             return result;
         }
 
-        private static List<ShopItem> GenerateShop(Random random, List<int> itemPool)
+        private static List<ShopItem> GenerateShop(Random random, List<int> unusedItems)
         {
             var result = new List<ShopItem>();
-            var unusedItems = new List<int>(itemPool);
 
             for (int i = 0; i < 16; i++)
             {

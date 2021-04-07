@@ -16,5 +16,6 @@ namespace Sleepey.Maelstrom
         public bool Magazine { get; set; } = false;
         public bool SummonItem { get; set; } = false;
         public bool ChocoboWorld { get; set; } = false;
+        public bool StatUp { get; set; } = false;
     }
 }

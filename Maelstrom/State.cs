@@ -60,6 +60,8 @@ namespace Sleepey.Maelstrom
         public bool ShopMagazines { get; set; } = false;
         public bool ShopChocoboWorld { get; set; } = false;
         public bool ShopSummonItems { get; set; } = false;
+        public bool ShopStatUps { get; set; } = false;
+        public bool ShopUnique { get; set; } = false;
 
         // upgrades
         public bool UpgradeEnable { get; set; } = false;

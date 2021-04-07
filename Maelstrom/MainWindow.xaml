@@ -130,6 +130,8 @@
                                 <local:OptionWithDescription Title="Allow Summon Items" Description="Magical Lamp, Solomon Ring" Checked="{Binding ShopSummonItems, Mode=TwoWay}" />
                                 <local:OptionWithDescription Title="Allow Magazines" Description="Weapons Monthly, Pet Pals, etc." Checked="{Binding ShopMagazines, Mode=TwoWay}" />
                                 <local:OptionWithDescription Title="Allow PocketStation Items" Description="Friendship, Mog's Amulet, Chocobo's Tag, Ribbon" Checked="{Binding ShopChocoboWorld, Mode=TwoWay}" />
+                                <local:OptionWithDescription Title="Allow Stat Ups" Description="HP Up, Str Up, Vit Up, etc." Checked="{Binding ShopStatUps, Mode=TwoWay}" />
+                                <local:OptionWithDescription Title="Minimal Duplicate Items" Description="Shops all offer different items" Checked="{Binding ShopUnique, Mode=TwoWay}" />
                             </StackPanel>
                         </local:ToggleGroupBox>
                         <local:ToggleGroupBox Title="Random Junk Shops" Checked="{Binding UpgradeEnable, Mode=TwoWay}">

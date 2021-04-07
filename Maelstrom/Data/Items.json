@@ -681,31 +681,38 @@
     },
     {
         "ID": 169,
-        "Name": "HP Up"
+        "Name": "HP Up",
+        "StatUp":  true
     },
     {
         "ID": 170,
-        "Name": "Str Up"
+        "Name": "Str Up",
+        "StatUp":  true
     },
     {
         "ID": 171,
-        "Name": "Vit Up"
+        "Name": "Vit Up",
+        "StatUp":  true
     },
     {
         "ID": 172,
-        "Name": "Mag Up"
+        "Name": "Mag Up",
+        "StatUp":  true
     },
     {
         "ID": 173,
-        "Name": "Spr Up"
+        "Name": "Spr Up",
+        "StatUp":  true
     },
     {
         "ID": 174,
-        "Name": "Spd Up"
+        "Name": "Spd Up",
+        "StatUp":  true
     },
     {
         "ID": 175,
-        "Name": "Luck Up"
+        "Name": "Luck Up",
+        "StatUp":  true
     },
     {
         "ID": 176,

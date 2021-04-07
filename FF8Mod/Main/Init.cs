@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using System.IO;
 
@@ -30,6 +29,11 @@ namespace Sleepey.FF8Mod.Main
             foreach (var gf in GFs) result.AddRange(gf.Encode());
             result.AddRange(OtherData);
             return result;
+        }
+
+        public IList<InitGF> CloneGFs()
+        {
+            return GFs.Select(gf => gf.Clone()).ToList();
         }
     }
 }

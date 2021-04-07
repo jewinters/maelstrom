@@ -8,6 +8,9 @@ using Sleepey.FF8Mod;
 
 namespace Sleepey.Maelstrom
 {
+    //This is a static class that is responsible for configuring and calling the AbilityRandomizer class and saving changes.
+    //
+    //All Ability-related randomizer settings are read here and are used to determine how to call the AbilityRandomizer class.
     public static class AbilityShuffle
     {
         public static List<AbilityMeta> Abilities = JsonSerializer.Deserialize<List<AbilityMeta>>(App.ReadEmbeddedFile("Sleepey.Maelstrom.Data.Abilities.json"));

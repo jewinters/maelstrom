@@ -6,6 +6,17 @@ using System.Linq;
 
 namespace Sleepey.Maelstrom
 {
+    //This class contains all the functions for randomizing GF abilities.
+    //
+    //It should have no visibility into the randomizer settings and should only be concerned with:
+    //    - A list of available abilities
+    //    - A list of guaranteed abilities that all GFs should have
+    //    - A list of unique abilities that at most one GF should have
+    //
+    //It needs a Random object, a Kernel (for access to GF data), and an Init (for access to Ability data).
+    //
+    //Future refactor: Expand Kernel and Init from data objects into fully functioning objects and let them
+    // handle the details of it's individual data elements. Demeter is screaming at us right now.
     class AbilityRandomizer
     {
         private Random random;
@@ -23,8 +34,8 @@ namespace Sleepey.Maelstrom
         {
             var unmatchedGFs = Enumerable.Range(0, 16).ToList();
 
-            IList<JunctionableGF> cleanJunctionableGFs = kernel.JunctionableGFs.Select(junctionableGF => junctionableGF.Clone()).ToList();
-            IList<InitGF> cleanInitGFs = init.GFs.Select(initGF => initGF.Clone()).ToList();
+            IList<JunctionableGF> cleanJunctionableGFs = kernel.CloneJunctionableGFs();
+            IList<InitGF> cleanInitGFs = init.CloneGFs();
 
             for (int i = 0; i < 16; i++)
             {
