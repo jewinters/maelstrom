@@ -1,232 +1,288 @@
 [
     {
         "SpellID": 1,
-        "SpellName": "Fire"
+        "SpellName": "Fire",
+        "SpellLevel":  0
     },
     {
         "SpellID": 2,
-        "SpellName": "Fira"
+        "SpellName": "Fira",
+        "SpellLevel":  16
     },
     {
         "SpellID": 3,
-        "SpellName": "Firaga"
+        "SpellName": "Firaga",
+        "SpellLevel":  33
     },
     {
         "SpellID": 4,
-        "SpellName": "Blizzard"
+        "SpellName": "Blizzard",
+        "SpellLevel":  0
     },
     {
         "SpellID": 5,
-        "SpellName": "Blizzara"
+        "SpellName": "Blizzara",
+        "SpellLevel":  16
     },
     {
         "SpellID": 6,
-        "SpellName": "Blizzaga"
+        "SpellName": "Blizzaga",
+        "SpellLevel":  33
     },
     {
         "SpellID": 7,
-        "SpellName": "Thunder"
+        "SpellName": "Thunder",
+        "SpellLevel":  0
     },
     {
         "SpellID": 8,
-        "SpellName": "Thundara"
+        "SpellName": "Thundara",
+        "SpellLevel":  16
     },
     {
         "SpellID": 9,
-        "SpellName": "Thundaga"
+        "SpellName": "Thundaga",
+        "SpellLevel":  33
     },
     {
         "SpellID": 10,
-        "SpellName": "Water"
+        "SpellName": "Water",
+        "SpellLevel":  18
     },
     {
         "SpellID": 11,
-        "SpellName": "Aero"
+        "SpellName": "Aero",
+        "SpellLevel":  17
     },
     {
         "SpellID": 12,
-        "SpellName": "Bio"
+        "SpellName": "Bio",
+        "SpellLevel":  22
     },
     {
         "SpellID": 13,
-        "SpellName": "Demi"
+        "SpellName": "Demi",
+        "SpellLevel":  36
     },
     {
         "SpellID": 14,
-        "SpellName": "Holy"
+        "SpellName": "Holy",
+        "SpellLevel":  40
     },
     {
         "SpellID": 15,
-        "SpellName": "Flare"
+        "SpellName": "Flare",
+        "SpellLevel":  40
     },
     {
         "SpellID": 16,
-        "SpellName": "Meteor"
+        "SpellName": "Meteor",
+        "SpellLevel":  42
     },
     {
         "SpellID": 17,
-        "SpellName": "Quake"
+        "SpellName": "Quake",
+        "SpellLevel":  38
     },
     {
         "SpellID": 18,
-        "SpellName": "Tornado"
+        "SpellName": "Tornado",
+        "SpellLevel":  39
     },
     {
         "SpellID": 19,
-        "SpellName": "Ultima"
+        "SpellName": "Ultima",
+        "SpellLevel":  44
     },
     {
         "SpellID": 20,
-        "SpellName": "Apocalypse"
+        "SpellName": "Apocalypse",
+        "SpellLevel":  46
     },
     {
         "SpellID": 21,
-        "SpellName": "Cure"
+        "SpellName": "Cure",
+        "SpellLevel":  0
     },
     {
         "SpellID": 22,
-        "SpellName": "Cura"
+        "SpellName": "Cura",
+        "SpellLevel": 15
     },
     {
         "SpellID": 23,
-        "SpellName": "Curaga"
+        "SpellName": "Curaga",
+        "SpellLevel":  34
     },
     {
         "SpellID": 24,
-        "SpellName": "Life"
+        "SpellName": "Life",
+        "SpellLevel":  20
     },
     {
         "SpellID": 25,
-        "SpellName": "Full-life"
+        "SpellName": "Full-life",
+        "SpellLevel":  38
     },
     {
         "SpellID": 26,
-        "SpellName": "Regen"
+        "SpellName": "Regen",
+        "SpellLevel":  36
     },
     {
         "SpellID": 27,
-        "SpellName": "Esuna"
+        "SpellName": "Esuna",
+        "SpellLevel":  16
     },
     {
         "SpellID": 28,
-        "SpellName": "Dispel"
+        "SpellName": "Dispel",
+        "SpellLevel":  20
     },
     {
         "SpellID": 29,
-        "SpellName": "Protect"
+        "SpellName": "Protect",
+        "SpellLevel":  17
     },
     {
         "SpellID": 30,
-        "SpellName": "Shell"
+        "SpellName": "Shell",
+        "SpellLevel":  17
     },
     {
         "SpellID": 31,
-        "SpellName": "Reflect"
+        "SpellName": "Reflect",
+        "SpellLevel":  35
     },
     {
         "SpellID": 32,
-        "SpellName": "Aura"
+        "SpellName": "Aura",
+        "SpellLevel":  40
     },
     {
         "SpellID": 33,
-        "SpellName": "Double"
+        "SpellName": "Double",
+        "SpellLevel":  16
     },
     {
         "SpellID": 34,
-        "SpellName": "Triple"
+        "SpellName": "Triple",
+        "SpellLevel":  36
     },
     {
         "SpellID": 35,
-        "SpellName": "Haste"
+        "SpellName": "Haste",
+        "SpellLevel":  18
     },
     {
         "SpellID": 36,
-        "SpellName": "Slow"
+        "SpellName": "Slow",
+        "SpellLevel":  18
     },
     {
         "SpellID": 37,
-        "SpellName": "Stop"
+        "SpellName": "Stop",
+        "SpellLevel":  28
     },
     {
         "SpellID": 38,
-        "SpellName": "Blind"
+        "SpellName": "Blind",
+        "SpellLevel":  12
     },
     {
         "SpellID": 39,
-        "SpellName": "Confuse"
+        "SpellName": "Confuse",
+        "SpellLevel":  26
     },
     {
         "SpellID": 40,
-        "SpellName": "Sleep"
+        "SpellName": "Sleep",
+        "SpellLevel":  2
     },
     {
         "SpellID": 41,
-        "SpellName": "Silence"
+        "SpellName": "Silence",
+        "SpellLevel":  2
     },
     {
         "SpellID": 42,
-        "SpellName": "Break"
+        "SpellName": "Break",
+        "SpellLevel":  29
     },
     {
         "SpellID": 43,
-        "SpellName": "Death"
+        "SpellName": "Death",
+        "SpellLevel":  34
     },
     {
         "SpellID": 44,
-        "SpellName": "Drain"
+        "SpellName": "Drain",
+        "SpellLevel":  18
     },
     {
         "SpellID": 45,
-        "SpellName": "Pain"
+        "SpellName": "Pain",
+        "SpellLevel":  40
     },
     {
         "SpellID": 46,
-        "SpellName": "Berserk"
+        "SpellName": "Berserk",
+        "SpellLevel":  13
     },
     {
         "SpellID": 47,
-        "SpellName": "Float"
+        "SpellName": "Float",
+        "SpellLevel":  11
     },
     {
         "SpellID": 48,
-        "SpellName": "Zombie"
+        "SpellName": "Zombie",
+        "SpellLevel":  15
     },
     {
         "SpellID": 49,
-        "SpellName": "Meltdown"
+        "SpellName": "Meltdown",
+        "SpellLevel":  35
     },
     {
         "SpellID": 50,
-        "SpellName": "Scan"
+        "SpellName": "Scan",
+        "SpellLevel":  1
     },
     {
         "SpellID": 51,
         "SpellName": "Full-cure",
-        "SlotExclusive": true
+        "SlotExclusive": true,
+        "SpellLevel":  50
     },
     {
         "SpellID": 52,
         "SpellName": "Wall",
-        "SlotExclusive": true
+        "SlotExclusive": true,
+        "SpellLevel":  50
     },
     {
         "SpellID": 53,
         "SpellName": "Rapture",
-        "SlotExclusive": true
+        "SlotExclusive": true,
+        "SpellLevel":  50
     },
     {
         "SpellID": 54,
         "SpellName": "Percent",
-        "CutContent": true
+        "CutContent": true,
+        "SpellLevel":  50
     },
     {
         "SpellID": 55,
         "SpellName": "Catastrophe",
-        "CutContent": true
+        "CutContent": true,
+        "SpellLevel":  50
     },
     {
         "SpellID": 56,
         "SpellName": "The End",
-        "SlotExclusive": true
+        "SlotExclusive": true,
+        "SpellLevel":  50
     }
 ]

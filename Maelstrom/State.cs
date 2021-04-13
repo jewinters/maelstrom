@@ -45,6 +45,7 @@ namespace Sleepey.Maelstrom
         public bool LootDrawsApoc { get; set; } = false;
         public bool LootDrawsSlot { get; set; } = false;
         public bool LootDrawsCut { get; set; } = false;
+        public bool LootDrawsSort { get; set; } = false;
 
         // abilities
         public bool GfAbilitiesEnable { get; set; } = false;

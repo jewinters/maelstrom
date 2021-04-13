@@ -1,21 +1,57 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Diagnostics;
-using Sleepey.FF8Mod;
 using Sleepey.FF8Mod.Archive;
 using Sleepey.FF8Mod.Battle;
+using Sleepey.FF8Mod.Exe;
 
 namespace Sleepey.Maelstrom
 {
-    public static class LootShuffle
+    public class LootShuffle
     {
-        public static List<MonsterInfo> Randomise(FileSource battleSource, int seed, State settings)
+        FileSource battleSource;
+        State settings;
+
+        Random dropRandom;
+        Random stealRandom;
+        Random drawRandom;
+
+        List<Spell> drawPool;
+        List<int> mugPool;
+        List<int> dropPool;
+
+        public LootShuffle(FileSource battleSource, int seed, State settings)
         {
-            var dropRandom = new Random(seed + 5);
-            var stealRandom = new Random(seed + 6);
-            var drawRandom = new Random(seed + 7);
+            this.battleSource = battleSource;
+            dropRandom = new Random(seed + 5);
+            stealRandom = new Random(seed + 6);
+            drawRandom = new Random(seed + 7);
+            this.settings = settings;
+
+            drawPool = DrawPointShuffle.Spells
+                .Where(spell => spell.SpellID != 20 || settings.LootDrawsApoc)
+                .Where(spell => !spell.SlotExclusive || settings.LootDrawsSlot)
+                .Where(spell => !spell.CutContent || settings.LootDrawsCut)
+                .ToList();
+
+            mugPool = Item.Lookup.Values
+                .Where(item => !item.KeyItem || settings.LootStealsKeyItems)
+                .Where(item => !item.SummonItem || settings.LootStealsSummonItems)
+                .Where(item => !item.Magazine || settings.LootStealsMagazines)
+                .Where(item => !item.ChocoboWorld || settings.LootStealsChocoboWorld)
+                .Select(item => item.ID).ToList();
+
+            dropPool = Item.Lookup.Values
+                .Where(item => !item.KeyItem || settings.LootDropsKeyItems)
+                .Where(item => !item.SummonItem || settings.LootDropsSummonItems)
+                .Where(item => !item.Magazine || settings.LootDropsMagazines)
+                .Where(item => !item.ChocoboWorld || settings.LootDropsChocoboWorld)
+                .Select(item => item.ID).ToList();
+        }
+
+        public List<MonsterInfo> Randomise()
+        {
+
             var result = new List<MonsterInfo>();
 
             for (int i = 0; i < 144; i++)
@@ -28,13 +64,6 @@ namespace Sleepey.Maelstrom
                     // items to steal
                     if (settings.LootSteals)
                     {
-                        var mugPool = Item.Lookup.Values
-                            .Where(item => !item.KeyItem || settings.LootStealsKeyItems)
-                            .Where(item => !item.SummonItem || settings.LootStealsSummonItems)
-                            .Where(item => !item.Magazine || settings.LootStealsMagazines)
-                            .Where(item => !item.ChocoboWorld || settings.LootStealsChocoboWorld)
-                            .Select(item => item.ID).ToList();
-
                         monster.Info.MugLow = FourRandomItems(stealRandom, mugPool);
                         monster.Info.MugMed = FourRandomItems(stealRandom, mugPool);
                         monster.Info.MugHigh = FourRandomItems(stealRandom, mugPool);
@@ -43,13 +72,6 @@ namespace Sleepey.Maelstrom
                     // items dropped
                     if (settings.LootDrops)
                     {
-                        var dropPool = Item.Lookup.Values
-                            .Where(item => !item.KeyItem || settings.LootDropsKeyItems)
-                            .Where(item => !item.SummonItem || settings.LootDropsSummonItems)
-                            .Where(item => !item.Magazine || settings.LootDropsMagazines)
-                            .Where(item => !item.ChocoboWorld || settings.LootDropsChocoboWorld)
-                            .Select(item => item.ID).ToList();
-
                         monster.Info.DropLow = FourRandomItems(dropRandom, dropPool);
                         monster.Info.DropMed = FourRandomItems(dropRandom, dropPool);
                         monster.Info.DropHigh = FourRandomItems(dropRandom, dropPool);
@@ -58,18 +80,25 @@ namespace Sleepey.Maelstrom
                     // spells to draw
                     if (settings.LootDraws)
                     {
-                        var drawPool = DrawPointShuffle.Spells
-                            .Where(spell => spell.SpellID != 20 || settings.LootDrawsApoc)
-                            .Where(spell => !spell.SlotExclusive || settings.LootDrawsSlot)
-                            .Where(spell => !spell.CutContent || settings.LootDrawsCut)
-                            .Select(spell => spell.SpellID).ToList();
-
                         var gf = monster.Info.DrawLow.Where(d => d >= 64).FirstOrDefault();
-                        var slots = Math.Max(1, Math.Min(4, settings.LootDrawsAmount));
+                        int slots = Math.Max(1, Math.Min(4, settings.LootDrawsAmount));
 
-                        monster.Info.DrawLow = FourRandomSpells(drawRandom, drawPool, slots, gf);
-                        monster.Info.DrawMed = FourRandomSpells(drawRandom, drawPool, slots, gf);
-                        monster.Info.DrawHigh = FourRandomSpells(drawRandom, drawPool, slots, gf);
+                        var selectedSpells = RandomOrderedSpells(slots * 3);
+                        var lowSpells = selectedSpells.GetRange(0, slots).Select(spell => (byte)spell.SpellID).ToList();
+                        var medSpells = selectedSpells.GetRange(slots, slots).Select(spell => (byte)spell.SpellID).ToList();
+                        var highSpells = selectedSpells.GetRange(2 * slots, slots).Select(spell => (byte)spell.SpellID).ToList();
+
+                        //If there's a GF, it takes the last spot
+                        if (gf > 0)
+                        {
+                            lowSpells.Add(gf);
+                            medSpells.Add(gf);
+                            highSpells.Add(gf);
+                        }
+
+                        monster.Info.DrawLow = lowSpells.ToArray();
+                        monster.Info.DrawMed = medSpells.ToArray();
+                        monster.Info.DrawHigh = highSpells.ToArray();
                     }
 
                     battleSource.ReplaceFile(Monster.GetPath(i), monster.Encode());
@@ -81,7 +110,7 @@ namespace Sleepey.Maelstrom
             return result;
         }
 
-        private static HeldItem RandomItem(Random random, List<int> itemPool)
+        private HeldItem RandomItem(Random random, List<int> itemPool)
         {
             // allow item slot to be empty
             if (!itemPool.Contains(0)) itemPool.Add(0);
@@ -91,7 +120,7 @@ namespace Sleepey.Maelstrom
             return new HeldItem(id, quantity);
         }
 
-        private static HeldItem[] FourRandomItems(Random random, List<int> itemPool)
+        private HeldItem[] FourRandomItems(Random random, List<int> itemPool)
         {
             return new HeldItem[]
             {
@@ -102,27 +131,30 @@ namespace Sleepey.Maelstrom
             };
         }
 
-        private static byte RandomSpell(Random random, List<int> spellPool)
+        private Spell RandomSpell()
         {
-            return (byte)spellPool[random.Next(spellPool.Count)];
+            return drawPool[drawRandom.Next(drawPool.Count)];
         }
 
-        private static byte[] FourRandomSpells(Random random, List<int> spellPool, int slots, byte gf = 0)
+        private List<Spell> RandomOrderedSpells(int count)
         {
-            var result = new List<byte>();
+            var result = new List<Spell>();
 
-            for (int i = 0; i < 4; i++)
+            for (int i = 0; i < count; i++) 
             {
-                byte spell = 0;
+                Spell spell = RandomSpell();
 
-                // if there's a gf it takes the last slot
-                if (i == slots - 1 && gf > 0) spell = gf;
-                else if (i < slots) spell = RandomSpell(random, spellPool);
-
+                //no dupes
+                while (result.Contains(spell)) spell = RandomSpell();
+                
                 result.Add(spell);
             }
 
-            return result.ToArray();
+            if (settings.LootDrawsSort) { 
+                result.Sort();
+            }
+
+            return result;
         }
     }
 }

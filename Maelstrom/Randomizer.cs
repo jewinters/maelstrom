@@ -205,7 +205,8 @@ namespace Sleepey.Maelstrom
 
                     if (drops || steals || draws)
                     {
-                        var shuffle = LootShuffle.Randomise(battleSource, seed, settings);
+                        LootShuffle lootShuffle = new LootShuffle(battleSource, seed, settings);
+                        var shuffle = lootShuffle.Randomise();
                         if (settings.SpoilerFile) spoilerFile.AddLoot(shuffle, drops, steals, draws);
                     }
 
