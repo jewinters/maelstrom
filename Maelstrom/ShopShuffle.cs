@@ -28,8 +28,7 @@ namespace Sleepey.Maelstrom
             var unusedItems = new List<int>(pool);
             foreach (var s in result)
             {
-                //Don't bother randomizing inaccessible shops
-                if (!s.Name.Contains("Laguna") || s.Name.Equals("Winhill Shop (Laguna)"))
+                if (s.Accessible)
                 {
                     s.Items = GenerateShop(random, unusedItems);
 

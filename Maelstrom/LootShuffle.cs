@@ -33,6 +33,7 @@ namespace Sleepey.Maelstrom
                             .Where(item => !item.SummonItem || settings.LootStealsSummonItems)
                             .Where(item => !item.Magazine || settings.LootStealsMagazines)
                             .Where(item => !item.ChocoboWorld || settings.LootStealsChocoboWorld)
+                            .Where(item => !item.StatUp || settings.LootStealsStatUps)
                             .Select(item => item.ID).ToList();
 
                         monster.Info.MugLow = FourRandomItems(stealRandom, mugPool);
@@ -48,6 +49,7 @@ namespace Sleepey.Maelstrom
                             .Where(item => !item.SummonItem || settings.LootDropsSummonItems)
                             .Where(item => !item.Magazine || settings.LootDropsMagazines)
                             .Where(item => !item.ChocoboWorld || settings.LootDropsChocoboWorld)
+                            .Where(item => !item.StatUp || settings.LootDropsStatUps)
                             .Select(item => item.ID).ToList();
 
                         monster.Info.DropLow = FourRandomItems(dropRandom, dropPool);

@@ -484,6 +484,7 @@
     },
     {
         "Name": "Trabia Shop",
+        "Accessible":  false,
         "Items": [
             {
                 "ItemCode": 1,
@@ -622,6 +623,7 @@
     },
     {
         "Name": "Balamb Shop (Laguna)",
+        "Accessible":  false,
         "Items": [
             {
                 "ItemCode": 1,
@@ -691,6 +693,7 @@
     },
     {
         "Name": "Dollet Shop (Laguna)",
+        "Accessible":  false,
         "Items": [
             {
                 "ItemCode": 1,
@@ -760,6 +763,7 @@
     },
     {
         "Name": "Timber Shop (Laguna)",
+        "Accessible":  false,
         "Items": [
             {
                 "ItemCode": 1,
@@ -829,6 +833,7 @@
     },
     {
         "Name": "Deling City Shop (Laguna)",
+        "Accessible":  false,
         "Items": [
             {
                 "ItemCode": 1,
@@ -967,6 +972,7 @@
     },
     {
         "Name": "Fisherman's Horizon Shop (Laguna)",
+        "Accessible":  false,
         "Items": [
             {
                 "ItemCode": 1,
@@ -1036,6 +1042,7 @@
     },
     {
         "Name": "Trabia Shop (Laguna)",
+        "Accessible":  false,
         "Items": [
             {
                 "ItemCode": 1,

@@ -31,6 +31,7 @@ namespace Sleepey.Maelstrom
         public bool LootDropsSummonItems { get; set; } = false;
         public bool LootDropsMagazines { get; set; } = false;
         public bool LootDropsChocoboWorld { get; set; } = false;
+        public bool LootDropsStatUps { get; set; } = false;
 
         // steals
         public bool LootSteals { get; set; } = false;
@@ -38,6 +39,7 @@ namespace Sleepey.Maelstrom
         public bool LootStealsSummonItems { get; set; } = false;
         public bool LootStealsMagazines { get; set; } = false;
         public bool LootStealsChocoboWorld { get; set; } = false;
+        public bool LootStealsStatUps { get; set; } = false;
 
         // draws
         public bool LootDraws { get; set; } = false;

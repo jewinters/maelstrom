@@ -180,6 +180,7 @@
                                 <local:OptionWithDescription Title="Allow Summon Items" Description="Magical Lamp, Solomon Ring" Checked="{Binding LootDropsSummonItems, Mode=TwoWay}" />
                                 <local:OptionWithDescription Title="Allow Magazines" Description="Weapons Monthly, Pet Pals, etc." Checked="{Binding LootDropsMagazines, Mode=TwoWay}" />
                                 <local:OptionWithDescription Title="Allow PocketStation Items" Description="Friendship, Mog's Amulet, Chocobo's Tag, Ribbon" Checked="{Binding LootDropsChocoboWorld, Mode=TwoWay}" />
+                                <local:OptionWithDescription Title="Allow Stat Ups" Description="HP Up, Str Up, Vit Up, etc." Checked="{Binding LootDropsStatUps, Mode=TwoWay}" />
                             </StackPanel>
                         </local:ToggleGroupBox>
                         <local:ToggleGroupBox Title="Random Steals" Checked="{Binding LootSteals, Mode=TwoWay}">
@@ -190,6 +191,7 @@
                                 <local:OptionWithDescription Title="Allow Summon Items" Description="Magical Lamp, Solomon Ring" Checked="{Binding LootStealsSummonItems, Mode=TwoWay}" />
                                 <local:OptionWithDescription Title="Allow Magazines" Description="Weapons Monthly, Pet Pals, etc." Checked="{Binding LootStealsMagazines, Mode=TwoWay}" />
                                 <local:OptionWithDescription Title="Allow PocketStation Items" Description="Friendship, Mog's Amulet, Chocobo's Tag, Ribbon" Checked="{Binding LootStealsChocoboWorld, Mode=TwoWay}" />
+                                <local:OptionWithDescription Title="Allow Stat Ups" Description="HP Up, Str Up, Vit Up, etc." Checked="{Binding LootStealsStatUps, Mode=TwoWay}" />
                             </StackPanel>
                         </local:ToggleGroupBox>
                         <local:ToggleGroupBox Title="Random Draws" Checked="{Binding LootDraws, Mode=TwoWay}">

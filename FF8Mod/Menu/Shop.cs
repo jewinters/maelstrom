@@ -8,6 +8,7 @@ namespace Sleepey.FF8Mod.Menu
     {
         public string Name { get; set; }
         public List<ShopItem> Items { get; set; } = new List<ShopItem>();
+        public Boolean Accessible { get; set; } = true;
 
         public Shop() { }
 
