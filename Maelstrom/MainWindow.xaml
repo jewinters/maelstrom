@@ -230,12 +230,242 @@
                             <StackPanel>
                                 <TextBlock>Each GF has a random set of abilities to learn.</TextBlock>
                                 <Separator />
-                                <local:OptionWithDescription Title="Guarantee Basics" Description="Every GF comes with these abilities already unlocked: Magic, GF, Item, Draw." Checked="{Binding GfAbilitiesBasics, Mode=TwoWay}" />
-                                <local:OptionWithDescription Title="No Menu Duplicates" Description="Menu abilities will appear on only one GF. This does not guarantee that all menu abilities will be available." Checked="{Binding GFAbilitiesNoMenuDuplicates, Mode=TwoWay}" />
-                                <local:OptionWithDescription Title="Allow Item-Exclusives" Description="GFs may learn abilities that would normally require the use of an item: MiniMog, Vit+60%, Spr+60%, Return Damage, Ribbon." Checked="{Binding GfAbilitiesIncludeItemOnly, Mode=TwoWay}" />
                                 <local:OptionWithDescription Title="Randomize AP Cost" Description="Abilities will cost a random amount between 10 and 250 AP to learn." Checked="{Binding GfAbilitiesRandomAP, Mode=TwoWay}" />
                                 <Separator />
-                                <local:OptionWithDescription Title="Swap Sets" Description="Instead of randomizing each individual ability, GFs have their entire ability sets swapped around. This overrides the other options above." Checked="{Binding GfAbilitiesSwapSets, Mode=TwoWay}" />
+                                <local:OptionWithDescription Title="Swap Sets" Description="Instead of randomizing each individual ability, GFs have their entire ability sets swapped around. This overrides the other options below." Checked="{Binding GfAbilitiesSwapSets, Mode=TwoWay}" />
+                                <Separator />
+                                <local:OptionWithDescription Title="Guarantee Basics" Description="Every GF comes with these abilities already unlocked: Magic, GF, Item, Draw." Checked="{Binding GfAbilitiesBasics, Mode=TwoWay}" />
+                                <local:OptionWithDescription Title="No Menu Duplicates" Description="Menu abilities will appear on only one GF. This does not guarantee that all menu abilities will be available." Checked="{Binding GFAbilitiesNoMenuDuplicates, Mode=TwoWay}" />
+                                <local:ToggleGroupBox Title="Select Abilities to Include" Checked="{Binding GfAbilitiesSpecific, Mode=TwoWay}">
+                                    <StackPanel>
+                                        <TextBlock>
+                                            <Run Text="Notes:"/>
+                                            <LineBreak/>
+                                            <Run FontStyle="Oblique" Text=" - Every GF starts with 21 abilities, so at least 21 abilities must be selected."/>
+                                            <LineBreak/>
+                                            <Run FontStyle="Oblique" Text=" - Basic abilities that are not selected will not appear, even when using the Guarantee Basics option." />
+                                            <LineBreak/>
+                                            <Run FontStyle="Oblique" Text=" - Select at least 21 abilities that are not menu abilities when using the No Menu Duplicates option."/>
+                                            <LineBreak/>
+                                        </TextBlock>
+                                        <TextBlock FontStyle="Italic">Junction Abilities</TextBlock>
+                                        <Grid>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="150" />
+                                                <ColumnDefinition Width="150" />
+                                                <ColumnDefinition Width="150" />
+                                                <ColumnDefinition Width="*" />
+                                            </Grid.ColumnDefinitions>
+                                            <StackPanel Grid.Column="0">
+                                                <local:OptionWithDescription Title="HP-J" Checked="{Binding GfAbilities[1], Mode=TwoWay}" />
+                                                <local:OptionWithDescription Title="STR-J" Checked="{Binding GfAbilities[2], Mode=TwoWay}" />
+                                                <local:OptionWithDescription Title="VIT-J" Checked="{Binding GfAbilities[3], Mode=TwoWay}" />
+                                                <local:OptionWithDescription Title="MAG-J" Checked="{Binding GfAbilities[4], Mode=TwoWay}" />
+                                                <local:OptionWithDescription Title="SPR-J" Checked="{Binding GfAbilities[5], Mode=TwoWay}" />
+                                                <local:OptionWithDescription Title="SPD-J" Checked="{Binding GfAbilities[6], Mode=TwoWay}" />
+                                                <local:OptionWithDescription Title="EVA-J" Checked="{Binding GfAbilities[7], Mode=TwoWay}" />
+                                                <local:OptionWithDescription Title="HIT-J" Checked="{Binding GfAbilities[8], Mode=TwoWay}" />
+                                                <local:OptionWithDescription Title="LUCK-J" Checked="{Binding GfAbilities[9], Mode=TwoWay}" />
+                                            </StackPanel>
+                                            <StackPanel Grid.Column="1">
+                                                <local:OptionWithDescription Title="Elem-Atk-J" Checked="{Binding GfAbilities[10], Mode=TwoWay}" />
+                                                <local:OptionWithDescription Title="Elem-Def-J" Checked="{Binding GfAbilities[12], Mode=TwoWay}" />
+                                                <local:OptionWithDescription Title="Elem-Defx2" Checked="{Binding GfAbilities[14], Mode=TwoWay}" />
+                                                <local:OptionWithDescription Title="Elem-Defx4" Checked="{Binding GfAbilities[15], Mode=TwoWay}" />
+                                            </StackPanel>
+                                            <StackPanel Grid.Column="2">
+                                                <local:OptionWithDescription Title="ST-Atk-J" Checked="{Binding GfAbilities[11], Mode=TwoWay}" />
+                                                <local:OptionWithDescription Title="ST-Def-J" Checked="{Binding GfAbilities[13], Mode=TwoWay}" />
+                                                <local:OptionWithDescription Title="ST-Def-Jx2" Checked="{Binding GfAbilities[16], Mode=TwoWay}" />
+                                                <local:OptionWithDescription Title="ST-Def-Jx4" Checked="{Binding GfAbilities[17], Mode=TwoWay}" />
+                                            </StackPanel>
+                                            <StackPanel Grid.Column="3">
+                                                <local:OptionWithDescription Title="Abilityx3" Checked="{Binding GfAbilities[18], Mode=TwoWay}" />
+                                                <local:OptionWithDescription Title="Abilityx4" Checked="{Binding GfAbilities[19], Mode=TwoWay}" />
+                                            </StackPanel>
+                                        </Grid>
+                                        <TextBlock FontStyle="Italic">Character Abilities</TextBlock>
+                                        <Grid>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="150" />
+                                                <ColumnDefinition Width="150" />
+                                                <ColumnDefinition Width="150" />
+                                                <ColumnDefinition Width="*" />
+                                            </Grid.ColumnDefinitions>
+                                            <StackPanel Grid.Column="0">
+                                                <local:OptionWithDescription Title="Draw" Checked="{Binding GfAbilities[22], Mode=TwoWay}" />
+                                                <local:OptionWithDescription Title="GF" Checked="{Binding GfAbilities[21], Mode=TwoWay}" />
+                                                <local:OptionWithDescription Title="Item" Checked="{Binding GfAbilities[23], Mode=TwoWay}" />
+                                                <local:OptionWithDescription Title="Magic" Checked="{Binding GfAbilities[20], Mode=TwoWay}" />
+                                            </StackPanel>
+                                            <StackPanel Grid.Column="1">
+                                                <local:OptionWithDescription Title="Absorb" Checked="{Binding GfAbilities[32], Mode=TwoWay}" />
+                                                <local:OptionWithDescription Title="Card" Checked="{Binding GfAbilities[25], Mode=TwoWay}" />
+                                                <local:OptionWithDescription Title="Darkside" Checked="{Binding GfAbilities[30], Mode=TwoWay}" />
+                                                <local:OptionWithDescription Title="Defend" Checked="{Binding GfAbilities[29], Mode=TwoWay}" />
+                                                <local:OptionWithDescription Title="Devour" Checked="{Binding GfAbilities[37], Mode=TwoWay}" />
+                                                <local:OptionWithDescription Title="Doom" Checked="{Binding GfAbilities[26], Mode=TwoWay}" />
+                                                <local:OptionWithDescription Title="Kamikaze" Checked="{Binding GfAbilities[36], Mode=TwoWay}" />
+                                            </StackPanel>
+                                            <StackPanel Grid.Column="2">
+                                                <local:OptionWithDescription Title="LV Down" Checked="{Binding GfAbilities[34], Mode=TwoWay}" />
+                                                <local:OptionWithDescription Title="LV Up" Checked="{Binding GfAbilities[35], Mode=TwoWay}" />
+                                                <local:OptionWithDescription Title="MadRush" Checked="{Binding GfAbilities[27], Mode=TwoWay}" />
+                                                <local:OptionWithDescription Title="MiniMog" Checked="{Binding GfAbilities[38], Mode=TwoWay}" />
+                                                <local:OptionWithDescription Title="Recover" Checked="{Binding GfAbilities[31], Mode=TwoWay}" />
+                                                <local:OptionWithDescription Title="Revive" Checked="{Binding GfAbilities[33], Mode=TwoWay}" />
+                                                <local:OptionWithDescription Title="Treatment" Checked="{Binding GfAbilities[28], Mode=TwoWay}" />
+                                            </StackPanel>
+                                            <StackPanel Grid.Column="3">
+                                                <TextBlock FontStyle="Oblique" Foreground="DarkRed">This ability is useless</TextBlock>
+                                                <local:OptionWithDescription Title="Empty" Checked="{Binding GfAbilities[24], Mode=TwoWay}" />
+                                            </StackPanel>
+                                        </Grid>
+                                        <TextBlock FontStyle="Italic">Support Abilities</TextBlock>
+                                        <Grid>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="150" />
+                                                <ColumnDefinition Width="150" />
+                                                <ColumnDefinition Width="150" />
+                                                <ColumnDefinition Width="*" />
+                                            </Grid.ColumnDefinitions>
+                                            <StackPanel Grid.Column="0">
+                                                <local:OptionWithDescription Title="HP+20%" Checked="{Binding GfAbilities[39], Mode=TwoWay}" />
+                                                <local:OptionWithDescription Title="HP+40%" Checked="{Binding GfAbilities[40], Mode=TwoWay}" />
+                                                <local:OptionWithDescription Title="HP+80%" Checked="{Binding GfAbilities[41], Mode=TwoWay}" />
+                                                <local:OptionWithDescription Title="Str+20%" Checked="{Binding GfAbilities[42], Mode=TwoWay}" />
+                                                <local:OptionWithDescription Title="Str+40%" Checked="{Binding GfAbilities[43], Mode=TwoWay}" />
+                                                <local:OptionWithDescription Title="Str+60%" Checked="{Binding GfAbilities[44], Mode=TwoWay}" />
+                                                <local:OptionWithDescription Title="Vit+20%" Checked="{Binding GfAbilities[45], Mode=TwoWay}" />
+                                                <local:OptionWithDescription Title="Vit+40%" Checked="{Binding GfAbilities[46], Mode=TwoWay}" />
+                                                <local:OptionWithDescription Title="Vit+60%" Checked="{Binding GfAbilities[47], Mode=TwoWay}" />
+                                                <local:OptionWithDescription Title="Mag+20%" Checked="{Binding GfAbilities[48], Mode=TwoWay}" />
+                                                <local:OptionWithDescription Title="Mag+40%" Checked="{Binding GfAbilities[49], Mode=TwoWay}" />
+                                                <local:OptionWithDescription Title="Mag+60%" Checked="{Binding GfAbilities[50], Mode=TwoWay}" />
+                                                <local:OptionWithDescription Title="Spr+20%" Checked="{Binding GfAbilities[51], Mode=TwoWay}" />
+                                                <local:OptionWithDescription Title="Spr+40%" Checked="{Binding GfAbilities[52], Mode=TwoWay}" />
+                                                <local:OptionWithDescription Title="Spr+60%" Checked="{Binding GfAbilities[53], Mode=TwoWay}" />
+                                                <local:OptionWithDescription Title="Spd+20%" Checked="{Binding GfAbilities[54], Mode=TwoWay}" />
+                                                <local:OptionWithDescription Title="Spd+40%" Checked="{Binding GfAbilities[55], Mode=TwoWay}" />
+                                                <local:OptionWithDescription Title="Eva+30%" Checked="{Binding GfAbilities[56], Mode=TwoWay}" />
+                                                <local:OptionWithDescription Title="Luck+50%" Checked="{Binding GfAbilities[57], Mode=TwoWay}" />
+                                            </StackPanel>
+                                            <StackPanel Grid.Column="1">
+                                                <local:OptionWithDescription Title="Mug" Checked="{Binding GfAbilities[58], Mode=TwoWay}" />
+                                                <local:OptionWithDescription Title="Counter" Checked="{Binding GfAbilities[60], Mode=TwoWay}" />
+                                                <local:OptionWithDescription Title="Return Damage" Checked="{Binding GfAbilities[61], Mode=TwoWay}" />
+                                                <local:OptionWithDescription Title="Cover" Checked="{Binding GfAbilities[62], Mode=TwoWay}" />
+                                                <local:OptionWithDescription Title="Initiative" Checked="{Binding GfAbilities[63], Mode=TwoWay}" />
+                                                <local:OptionWithDescription Title="Med Data" Checked="{Binding GfAbilities[59], Mode=TwoWay}" />
+                                                <local:OptionWithDescription Title="Move-HP Up" Checked="{Binding GfAbilities[64], Mode=TwoWay}" />
+                                                <local:OptionWithDescription Title="Expendx2-1" Checked="{Binding GfAbilities[75], Mode=TwoWay}" />
+                                                <local:OptionWithDescription Title="Expendx3-1" Checked="{Binding GfAbilities[76], Mode=TwoWay}" />
+                                                <local:OptionWithDescription Title="Ribbon" Checked="{Binding GfAbilities[77], Mode=TwoWay}" />
+                                            </StackPanel>
+                                            <StackPanel Grid.Column="2">
+                                                <local:OptionWithDescription Title="Auto-Protect" Checked="{Binding GfAbilities[70], Mode=TwoWay}" />
+                                                <local:OptionWithDescription Title="Auto-Shell" Checked="{Binding GfAbilities[71], Mode=TwoWay}" />
+                                                <local:OptionWithDescription Title="Auto-Reflect" Checked="{Binding GfAbilities[72], Mode=TwoWay}" />
+                                                <local:OptionWithDescription Title="Auto-Haste" Checked="{Binding GfAbilities[73], Mode=TwoWay}" />
+                                                <local:OptionWithDescription Title="Auto-Potion" Checked="{Binding GfAbilities[74], Mode=TwoWay}" />
+                                            </StackPanel>
+                                            <StackPanel Grid.Column="3">
+                                                <local:OptionWithDescription Title="HP Bonus" Checked="{Binding GfAbilities[65], Mode=TwoWay}" />
+                                                <local:OptionWithDescription Title="Str Bonus" Checked="{Binding GfAbilities[66], Mode=TwoWay}" />
+                                                <local:OptionWithDescription Title="Vit Bonus" Checked="{Binding GfAbilities[67], Mode=TwoWay}" />
+                                                <local:OptionWithDescription Title="Mag Bonus" Checked="{Binding GfAbilities[68], Mode=TwoWay}" />
+                                                <local:OptionWithDescription Title="Spr Bonus" Checked="{Binding GfAbilities[69], Mode=TwoWay}" />
+                                            </StackPanel>
+                                        </Grid>
+                                        <TextBlock FontStyle="Italic">Party Abilities</TextBlock>
+                                        <Grid>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="150" />
+                                                <ColumnDefinition Width="150" />
+                                                <ColumnDefinition Width="150" />
+                                                <ColumnDefinition Width="*" />
+                                            </Grid.ColumnDefinitions>
+                                            <StackPanel Grid.Column="0">
+                                                <local:OptionWithDescription Title="Enc-Half" Checked="{Binding GfAbilities[80], Mode=TwoWay}" />
+                                                <local:OptionWithDescription Title="Enc-None" Checked="{Binding GfAbilities[81], Mode=TwoWay}" />
+                                            </StackPanel>
+                                            <StackPanel Grid.Column="1">
+                                                <local:OptionWithDescription Title="Alert" Checked="{Binding GfAbilities[78], Mode=TwoWay}" />
+                                            </StackPanel>
+                                            <StackPanel Grid.Column="2">
+                                                <local:OptionWithDescription Title="Move-Find" Checked="{Binding GfAbilities[79], Mode=TwoWay}" />
+                                            </StackPanel>
+                                            <StackPanel Grid.Column="3">
+                                                <local:OptionWithDescription Title="Rare Item" Checked="{Binding GfAbilities[82], Mode=TwoWay}" />
+                                            </StackPanel>
+                                        </Grid>
+                                        <TextBlock FontStyle="Italic">GF Abilities</TextBlock>
+                                        <Grid>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="150" />
+                                                <ColumnDefinition Width="150" />
+                                                <ColumnDefinition Width="150" />
+                                                <ColumnDefinition Width="*" />
+                                            </Grid.ColumnDefinitions>
+                                            <StackPanel Grid.Column="0">
+                                                <local:OptionWithDescription Title="SumMag+10%" Checked="{Binding GfAbilities[83], Mode=TwoWay}" />
+                                                <local:OptionWithDescription Title="SumMag+20%" Checked="{Binding GfAbilities[84], Mode=TwoWay}" />
+                                                <local:OptionWithDescription Title="SumMag+30%" Checked="{Binding GfAbilities[85], Mode=TwoWay}" />
+                                                <local:OptionWithDescription Title="SumMag+40%" Checked="{Binding GfAbilities[86], Mode=TwoWay}" />
+                                            </StackPanel>
+                                            <StackPanel Grid.Column="1">
+                                                <local:OptionWithDescription Title="GFHP+10%" Checked="{Binding GfAbilities[87], Mode=TwoWay}" />
+                                                <local:OptionWithDescription Title="GFHP+20%" Checked="{Binding GfAbilities[88], Mode=TwoWay}" />
+                                                <local:OptionWithDescription Title="GFHP+30%" Checked="{Binding GfAbilities[89], Mode=TwoWay}" />
+                                                <local:OptionWithDescription Title="GFHP+40%" Checked="{Binding GfAbilities[90], Mode=TwoWay}" />
+                                            </StackPanel>
+                                            <StackPanel Grid.Column="2">
+                                                <local:OptionWithDescription Title="Boost" Checked="{Binding GfAbilities[91], Mode=TwoWay}" />
+                                            </StackPanel>
+                                        </Grid>
+                                        <TextBlock FontStyle="Italic">Menu Abilities</TextBlock>
+                                        <Grid>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="150" />
+                                                <ColumnDefinition Width="150" />
+                                                <ColumnDefinition Width="150" />
+                                                <ColumnDefinition Width="*" />
+                                            </Grid.ColumnDefinitions>
+                                            <StackPanel Grid.Column="0">
+                                                <local:OptionWithDescription Title="T Mag-RF" Checked="{Binding GfAbilities[97], Mode=TwoWay}" />
+                                                <local:OptionWithDescription Title="I Mag-RF" Checked="{Binding GfAbilities[98], Mode=TwoWay}" />
+                                                <local:OptionWithDescription Title="F Mag-RF" Checked="{Binding GfAbilities[99], Mode=TwoWay}" />
+                                                <local:OptionWithDescription Title="L Mag-RF" Checked="{Binding GfAbilities[100], Mode=TwoWay}" />
+                                                <local:OptionWithDescription Title="Time Mag-RF" Checked="{Binding GfAbilities[101], Mode=TwoWay}" />
+                                                <local:OptionWithDescription Title="ST Mag-RF" Checked="{Binding GfAbilities[102], Mode=TwoWay}" />
+                                                <local:OptionWithDescription Title="Supt Mag-RF" Checked="{Binding GfAbilities[103], Mode=TwoWay}" />
+                                                <local:OptionWithDescription Title="Forbid Mag-RF" Checked="{Binding GfAbilities[104], Mode=TwoWay}" />
+                                                <local:OptionWithDescription Title="Mid Mag-RF" Checked="{Binding GfAbilities[112], Mode=TwoWay}" />
+                                                <local:OptionWithDescription Title="HighMag-RF" Checked="{Binding GfAbilities[113], Mode=TwoWay}" />
+                                            </StackPanel>
+                                            <StackPanel Grid.Column="1">
+                                                <local:OptionWithDescription Title="Haggle" Checked="{Binding GfAbilities[92], Mode=TwoWay}" />
+                                                <local:OptionWithDescription Title="Sell-High" Checked="{Binding GfAbilities[93], Mode=TwoWay}" />
+                                                <local:OptionWithDescription Title="Familiar" Checked="{Binding GfAbilities[94], Mode=TwoWay}" />
+                                                <local:OptionWithDescription Title="Call Shop" Checked="{Binding GfAbilities[95], Mode=TwoWay}" />
+                                                <local:OptionWithDescription Title="Junk Shop" Checked="{Binding GfAbilities[96], Mode=TwoWay}" />
+                                            </StackPanel>
+                                            <StackPanel Grid.Column="2">
+                                                <local:OptionWithDescription Title="Recov Med-RF" Checked="{Binding GfAbilities[105], Mode=TwoWay}" />
+                                                <local:OptionWithDescription Title="ST Med-RF" Checked="{Binding GfAbilities[106], Mode=TwoWay}" />
+                                                <local:OptionWithDescription Title="Forbid Med-RF" Checked="{Binding GfAbilities[109], Mode=TwoWay}" />
+                                                <local:OptionWithDescription Title="GFRecov Med-RF" Checked="{Binding GfAbilities[110], Mode=TwoWay}" />
+                                                <local:OptionWithDescription Title="MedLVUp" Checked="{Binding GfAbilities[114], Mode=TwoWay}" />
+                                            </StackPanel>
+                                            <StackPanel Grid.Column="3">
+                                                <local:OptionWithDescription Title="GFAbl Med-RF" Checked="{Binding GfAbilities[111], Mode=TwoWay}" />
+                                                <local:OptionWithDescription Title="Ammo-RF" Checked="{Binding GfAbilities[107], Mode=TwoWay}" />
+                                                <local:OptionWithDescription Title="Tool-RF" Checked="{Binding GfAbilities[108], Mode=TwoWay}" />
+                                                <local:OptionWithDescription Title="Card Mod" Checked="{Binding GfAbilities[115], Mode=TwoWay}" />
+                                            </StackPanel>
+                                        </Grid>
+                                    </StackPanel>
+                                </local:ToggleGroupBox>
                             </StackPanel>
                         </local:ToggleGroupBox>
                     </StackPanel>

@@ -30,9 +30,14 @@ namespace Sleepey.Maelstrom
             }
             else
             {
-                List<AbilityMeta> allFilteredAbilities = Abilities.Where(a => !a.ItemExclusive || settings.GfAbilitiesIncludeItemOnly).ToList();
-                List<AbilityMeta> guaranteedAbilities = Abilities.Where(a => a.BasicAbility && settings.GfAbilitiesBasics).ToList();
-                List<AbilityMeta> uniqueAbilities = Abilities.Where(a => a.MenuAbility && settings.GFAbilitiesNoMenuDuplicates).ToList();
+                List<AbilityMeta> allFilteredAbilities = Abilities.Where(a => !settings.GfAbilitiesSpecific || settings.GfAbilities[a.AbilityID]).ToList();
+                List<AbilityMeta> guaranteedAbilities = allFilteredAbilities.Where(a => a.BasicAbility && settings.GfAbilitiesBasics).ToList();
+                List<AbilityMeta> uniqueAbilities = allFilteredAbilities.Where(a => a.MenuAbility && settings.GFAbilitiesNoMenuDuplicates).ToList();
+
+                if ((allFilteredAbilities.Count - uniqueAbilities.Count) < 21)
+                {
+                    throw new ArgumentException("Not enough abilities selected. Skipping GF Ability randomization.");
+                }
 
                 abilityRandomizer.GenerateRandomSets(allFilteredAbilities, guaranteedAbilities, uniqueAbilities);
             }

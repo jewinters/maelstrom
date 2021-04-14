@@ -357,8 +357,15 @@ namespace Sleepey.Maelstrom
                     // ability shuffle
                     if (settings.GfAbilitiesEnable)
                     {
-                        var shuffle = AbilityShuffle.Randomise(mainSource, seed, settings);
-                        if (settings.SpoilerFile) spoilerFile.AddAbilities(shuffle);
+                        try
+                        {
+                            var shuffle = AbilityShuffle.Randomise(mainSource, seed, settings);
+                            if (settings.SpoilerFile) spoilerFile.AddAbilities(shuffle);
+                        } catch (ArgumentException e)
+                        {
+                            MessageBox.Show(e.Message, "Error", MessageBoxButton.OK);
+                            return;
+                        }
                     }
 
                     mainSource.Encode();
